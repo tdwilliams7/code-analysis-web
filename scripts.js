@@ -122,8 +122,9 @@ function sortObjListByProp(prop) {
 }
 
 const sortByFirstName = sortObjListByProp("firstName");
-
-const sortByLastName = personList => sortByFirstName(personList).reverse();
+// doesn't sort by last name just reverses first name
+// const sortByLastName = personList => sortByFirstName(personList).reverse();
+const sortByLastName = sortObjListByProp("lastName");
 
 /*==================================================
 
