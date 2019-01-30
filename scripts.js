@@ -74,10 +74,12 @@ function shuffleList(list) {
  * Remove any people that do not have the name we are
  * searching for.
  */
+// could use includes instead to show with exact match
 function filterByName(searchForName, personList) {
   return personList.filter(person => {
     return (
-      person.firstName === searchForName || person.lastName === searchForName
+      person.firstName.toLowerCase().includes(searchForName.toLowerCase()) ||
+      person.lastName.toLowerCase().includes(searchForName.toLowerCase())
     );
   });
 }
